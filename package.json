@@ -1,8 +1,8 @@
 {
-  "name": "front-end-workflow",
+  "name": "artist-theme",
   "version": "1.0.0",
-  "description": "front end workflow for static web pages",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.13.0",

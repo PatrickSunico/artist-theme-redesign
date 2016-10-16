@@ -332,9 +332,17 @@ section .paragraph-content {
   margin: 2px;
 }
 
-@media only screen and (max-width: 540px) {
-  .skill-set-container .skill-panel {
+@media only screen and (max-width: 580px) {
+  .skill-panel {
     max-width: 270px;
-    margin: 60px auto;
+    margin: 0 auto;
+  }
+  .skill-set-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .skill-set-container .skill-unit {
+    margin: 0 auto;
+    padding: 0;
   }
 }

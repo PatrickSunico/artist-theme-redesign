@@ -460,6 +460,10 @@ section .paragraph-content {
   margin-bottom: 20px;
 }
 
+.work-container .return {
+  margin-bottom: 20px;
+}
+
 .work-container .return::after {
   clear: both;
   content: "";
@@ -473,6 +477,14 @@ section .paragraph-content {
   opacity: 0.5;
   display: inline-block;
   float: left;
+}
+
+.work-container .return svg.back-icon path {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.work-container .return svg.back-icon:hover {
+  opacity: 1;
 }
 
 .work-container .return h4 {

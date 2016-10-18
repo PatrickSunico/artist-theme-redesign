@@ -455,41 +455,31 @@ section .paragraph-content {
   position: relative;
 }
 
-.work-container h4 {
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 32px;
-  line-height: 1.2;
-  margin: 0 0 20px;
-  display: block;
-}
-
 .work-container img {
   max-width: 100%;
   margin-bottom: 20px;
 }
 
-.work-container .work-return {
-  position: absolute;
-  top: -4px;
-  left: -60px;
+.work-container .return::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.work-container .return svg.back-icon {
   height: 40px;
   width: 40px;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 768px) {
-  .work-container .work-return {
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-}
-
-.work-container .work-return path {
-  fill: rgba(0, 0, 0, 0.5);
-}
-
-.work-container .work-return:hover {
   opacity: 0.5;
+  display: inline-block;
+  float: left;
+}
+
+.work-container .return h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 1.6;
+  margin: 0 0 0 20px;
+  display: inline-block;
 }

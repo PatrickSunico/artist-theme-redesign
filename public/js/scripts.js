@@ -1,19 +1,21 @@
 $(function() {
   smoothScroll(300);
   workBelt();
+  workLoad();
+
 });
 
 function smoothScroll (duration) {
   $('a.thumb-unit').on('click', function(event) {
-    console.log("Hello");
     var target = $($(this).attr('href'));
 
-    if(target.length) {
-      event.preventDefault();
-      $('html,body').animate( {
-        scrollTop: target.offset().top
-      }, duration);
-    }
+    // if(target.length) {
+    //   console.log(target.length);
+    //   event.preventDefault();
+    //   $('html,body').animate( {
+    //     scrollTop: target.offset().top
+    //   }, duration);
+    // }
   });
 }
 
@@ -28,6 +30,28 @@ function workBelt() {
     $('.work-belt').css('left', '0%');
     $('.work-container').hide(800);
     e.preventDefault();
+
+  });
+}
+
+// Loader
+function workLoad() {
+  $.ajaxSetup({cache: true});
+
+  $('.thumb-unit').click(function() {
+
+    var self = $(this),
+    newTitle = self.find('.thumb-overlay h4').text(),
+    author = self.find('.thumb-overlay h5').text(),
+    spinner = '<div class="loader">Loading...</div>',
+
+    newFolder = self.data('folder'), // refers to data-folder="work-1" inside of the portfolio section
+    newHTML = '../loaders/'+ newFolder +'.html'; // loads a specific project on click
+    $('.project-load').html(spinner).load(newHTML);
+
+    // New Title and Author Credenditals
+    $('.project-title').text(newTitle);
+    $('.author').text(author);
 
   });
 }

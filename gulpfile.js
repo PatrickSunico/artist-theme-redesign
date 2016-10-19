@@ -16,18 +16,18 @@ var gulp = require('gulp'),
 
     var rawPaths = {
       jade: './raw/views/index.jade',
+      jadeLoaders: './raw/views/loaders/**.jade',
       index: './public/index.html',
       scss: './raw/scss/**/*.scss*',
-      img: './raw/img/*',
       js: './raw/js/*.js*'
     };
 
     // For Public
     var output = {
       jadeOut: './public/',
+      jadeLoadersOut: 'public/loaders/',
       scssOut: './public/css',
       public: './public/',
-      img : './public/img-min/',
       jsOut: './public/js/'
     };
 
@@ -46,6 +46,14 @@ var autoprefixerOptions = {
            }))
            .pipe(gulp.dest(output.jadeOut));
   });
+
+  gulp.task('loaders', function(){
+    return gulp.src(rawPaths.jadeLoaders)
+          .pipe(jade({
+            pretty: true
+          }))
+          .pipe(gulp.dest(output.jadeLoadersOut));
+  });
   gulp.task('sass',function(){
     return gulp.src(rawPaths.scss)
            .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
@@ -60,14 +68,6 @@ var autoprefixerOptions = {
           .pipe(gulp.dest(output.jsOut));
   });
 
-
-
-  gulp.task('image-min',function(){
-    return gulp.src(rawPaths.img)
-          .pipe(imagemin())
-          .pipe(gulp.dest(output.img));
-  });
-
   // browser-sync reload
   gulp.task('browser-sync', function() {
       browserSync.init({
@@ -77,10 +77,11 @@ var autoprefixerOptions = {
       });
 
       //Watch files on reload
-      gulp.watch(rawPaths.index).on('change', browserSync.reload);
-      gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
-      gulp.watch(rawPaths.partials);
-      gulp.watch(rawPaths.js,['uglify']).on('change', browserSync.reload);
+      // gulp.watch(rawPaths.index).on('change', browserSync.reload);
+      // gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
+      // gulp.watch(rawPaths.partials);
+      // gulp.watch(rawPaths.js,['uglify']).on('change', browserSync.reload);
+
   });
 
 gulp.task('watch', function(){
@@ -88,6 +89,7 @@ gulp.task('watch', function(){
   gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
   gulp.watch(rawPaths.js,['uglify']).on('change', browserSync.reload);
   gulp.watch(rawPaths.jade, ['jade']);
+  gulp.watch(rawPaths.jadeLoaders,['loaders']);
 });
 
 // gulp.task('default',['sass','watch']);
@@ -95,6 +97,6 @@ gulp.task('watch', function(){
 
 
 // Defaults
-gulp.task('default', ['browser-sync','uglify','jade','sass', 'watch']);
+gulp.task('default', ['browser-sync', 'loaders' ,'uglify','jade','sass', 'watch']);
 
 gulp.task('compile', ['sass','uglify','watch']);

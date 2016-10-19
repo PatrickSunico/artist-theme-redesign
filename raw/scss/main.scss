@@ -1,0 +1,13 @@
+// vendor
+@import 'bourbon/bourbon';
+@import 'vendor/spinner';
+
+// Globals
+@import 'mixins/mixins';
+@import 'partials/global';
+
+// Partials
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/about';
+@import 'partials/portfolio';

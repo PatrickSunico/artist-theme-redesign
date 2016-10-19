@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+
+    title Design Theme
+    link(rel='stylesheet', href='vendor/normalize.css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway")
+    link(rel='stylesheet', href='css/main.min.css')
+
+  body
+    
+    //- navigation
+    include ../views/partials/header.jade    
+    
+    include ../views/partials/about.jade
+    
+    include ../views/partials/portfolio.jade
+    
+    include ../views/partials/footer.jade
+    //-CDN script
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js", charset="utf-8")
+    script(src="js/scripts.js", charset="utf-8")
+    
+    

@@ -1,0 +1,50 @@
+footer {
+  margin: 0;
+  padding: 0;
+  background: #3B413C;
+  // height: 100px;
+  padding: 50px 30px;
+  .sitemap {
+    clear: both;
+    &::after { // nests all child elements within the sitemap container
+      clear: both;
+      content: "";
+      display: table;
+    }
+    .logo {
+      height: 50px;
+      width: 50px;
+      background: #999;
+      float: left;
+      margin-right: 30px;
+    }
+
+    .sitemap-content {
+      float:left;
+      margin: 8px 0 8px 0;
+      nav {
+        a {
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+          font-size: 14px;
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+          margin-left: 15px;
+          &:hover {
+            color: #828489;
+            transition: all 0.2s ease;
+          }
+        }
+      }
+
+      p.copyright {
+        font-size: 14px;
+        margin: 0;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
+}

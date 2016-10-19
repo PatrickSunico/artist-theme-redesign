@@ -6,7 +6,10 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer'),
     jade = require('gulp-jade'),
+    uglify = require('gulp-uglify'),
+    pump = require('pump'),
     sass = require('gulp-sass');
+
 
 //Globs
 // ======================================================
@@ -15,7 +18,8 @@ var gulp = require('gulp'),
       jade: './raw/views/index.jade',
       index: './public/index.html',
       scss: './raw/scss/**/*.scss*',
-      img: './raw/img/*'
+      img: './raw/img/*',
+      js: './raw/js/*.js*'
     };
 
     // For Public
@@ -23,7 +27,8 @@ var gulp = require('gulp'),
       jadeOut: './public/',
       scssOut: './public/css',
       public: './public/',
-      img : './public/img-min/'
+      img : './public/img-min/',
+      jsOut: './public/js/'
     };
 
 // ======================================================
@@ -49,6 +54,14 @@ var autoprefixerOptions = {
            .pipe(gulp.dest(output.scssOut));
   });
 
+  gulp.task('uglify', function() {
+    return gulp.src(rawPaths.js)
+          // .pipe(uglify())
+          .pipe(gulp.dest(output.jsOut));
+  });
+
+
+
   gulp.task('image-min',function(){
     return gulp.src(rawPaths.img)
           .pipe(imagemin())
@@ -67,11 +80,13 @@ var autoprefixerOptions = {
       gulp.watch(rawPaths.index).on('change', browserSync.reload);
       gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
       gulp.watch(rawPaths.partials);
+      gulp.watch(rawPaths.js,['uglify']).on('change', browserSync.reload);
   });
 
 gulp.task('watch', function(){
   gulp.watch(rawPaths.index).on('change', browserSync.reload);
   gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
+  gulp.watch(rawPaths.js,['uglify']).on('change', browserSync.reload);
   gulp.watch(rawPaths.jade, ['jade']);
 });
 
@@ -80,6 +95,6 @@ gulp.task('watch', function(){
 
 
 // Defaults
-gulp.task('default', ['browser-sync','jade','sass', 'watch']);
+gulp.task('default', ['browser-sync','uglify','jade','sass', 'watch']);
 
-gulp.task('compile', ['sass','watch']);
+gulp.task('compile', ['sass','uglify','watch']);

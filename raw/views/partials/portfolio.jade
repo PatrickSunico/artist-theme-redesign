@@ -1,164 +1,37 @@
-section.alt-bg.section-work
+section.alt-section
   h3#work Work
-  .work-belt
-    .thumb-wrap
-      .thumb-container 
-        .grid
-          a(href="#")
-            img.img-portfolio(src="img-min/aircon-controller-thumb.jpg", alt="aircon-controller")
-            span.overlay-bg
-            span.overlay-text 
-              h4 Aircon Controller Mobile App
-              h5 Grace Saraswati
-        .grid
-          a(href="#")
-            img.img-portfolio(src="img-min/mobile-banking-thumb.jpg", alt="mobile-banking")
-            span.overlay-bg
-            span.overlay-text 
-              h4 Mobile Banking    
-              h5 Bady
-        .grid
-          a(href="#")
-            img.img-portfolio(src="img-min/stuntman-on-motorcycle-thumb.jpg", alt="stuntman")
-            span.overlay-bg
-            span.overlay-text 
-              h4 Stuntman on Motorcycle        
-              h5 Anton Fritsler(kit8)
-        .grid
-          a(href="#")
-            img.img-portfolio(src="img-min/one-page-site-thumb.jpg", alt="one-page-site")
-            span.overlay-bg
-            span.overlay-text 
-              h4 One Page Site
-              h5 Daniel Klopper
-        .grid
-          a(href="#")
-            img.img-portfolio(src="img-min/green-forest-night-thumb.jpg", alt="green-forest-night")
-            span.overlay-bg
-            span.overlay-text 
-              h4 Vitaliy Vill
-              h5 Green Forest Night
-        .grid
-          a(href="#")
-            img.img-portfolio(src="img-min/ripple-projects-thumb.jpg", alt="ripple-projects")
-            span.overlay-bg
-            span.overlay-text 
-              h4 Ripple Projects
-              h5 Hanna Tran 
-        .grid
-          a(href="#")
-            img.img-portfolio(src="img-min/city-exploration-thumb.jpg", alt="city-exploration")
-            span.overlay-bg
-            span.overlay-text 
-              h4 City Exploration       
-              h5 Vilém Ries
-        .grid
-          a(href="")
-            img.img-portfolio(src="img-min/app-for-events-thumb.jpg", alt="app-for-events")
-            span.overlay-bg
-            span.overlay-text 
-              h4 App for Events
-              h5 Jakub Antalik
-    .work-wrap
-      .work-container
-        .return
-          include ../icons/back-icon.jade
-          h4.project-title
-          h5.author
-        //- .project-load      
+  .thumb-container 
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/green-forest-night-thumb.jpg")
+      div.thumb-overlay
+        strong Test
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/one-page-site-thumb.jpg")
+      div.thumb-overlay
+        strong Test
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/stuntman-on-motorcycle-thumb.jpg")
+      div.thumb-overlay
+        strong Test
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/app-for-events-thumb.jpg")
+      div.thumb-overlay
+        strong Test
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/city-exploration-thumb.jpg")
+      div.thumb-overlay
+        strong Test
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/app-for-events-thumb.jpg")
+      div.thumb-overlay
+        strong Test
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/app-for-events-thumb.jpg")
+      div.thumb-overlay
+        strong Test
+    a.thumb-unit(href="#")
+      img.img-portfolio(src="../img-min/app-for-events-thumb.jpg")
+      div.thumb-overlay
+        strong Test
 
-
-//- TN Code
-//- section.alt-section.section-work
-//-   h3#work Work
-//-   .work-belt
-//-     .thumb-wrap
-//-       .thumb-container
-//-         //- Test Code
-//-         //- //- 1
-//-         //- .grid(data-folder="work-1")
-//-         //-   a(href="#")
-//-         //-     img.thumb-unit(src="img-min/thumb/green-forest-night-thumb.jpg")
-//-         //-     span.overlay-bg
-//-         //-     //- .overlay-text
-//-         //-       //- h4 Green Forest
-//-         //-       //- h5 Vitaliy Vill
-//-         //- //- 2
-//-         //- .grid(data-folder="work-2")
-//-         //-   a(href="#")
-//-         //-     img.thumb-unit(src="img-min/thumb/one-page-site-thumb.jpg")
-//-         //-     span.overlay-bg
-//-         //-     //- .overlay-text
-//-         //-       //- h4 Green Forest
-//-         //-       //- h5 Vitaliy Vill        
-//-         //- //- 3
-//-         //- .grid(data-folder="work-3")
-//-         //-   a(href="#")
-//-         //-     img.thumb-unit(src="img-min/thumb/stuntman-on-motorcycle-thumb.jpg")
-//-         //-     span.overlay-bg
-//-         //-     //- .overlay-text
-//-         //-       //- h4 Green Forest
-//-         //-       //- h5 Vitaliy Vill        
-//-         //- //- 4
-//-         //- .grid(data-folder="work-4")
-//-         //-   a(href="#")
-//-         //-     img.thumb-unit(src="img-min/thumb/ripple-projects-thumb.jpg")
-//-         //-     span.overlay-bg
-//-         //-     //- .overlay-text
-//-         //-       //- h4 Green Forest
-//-         //-       //- h5 Vitaliy Vill
-//-         
-//-         a.thumb-unit(data-folder="work-2" href="#" style="background-image: url(img-min/thumb/green-forest-night-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 Green Forest
-//-             h5 Vitaliy Vill
-//-         a.thumb-unit(data-folder="work-2" href="#" style="background-image: url(img-min/thumb/one-page-site-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 One Page Site
-//-             h5 Daniel Klopper
-//-         
-//-         a.thumb-unit(data-folder="work-3" href="#" style="background-image: url(img-min/thumb/stuntman-on-motorcycle-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 Stuntman
-//-             h5 Anton Fritsler(kit8)
-//-         
-//-         a.thumb-unit(data-folder="work-4" href="#" style="background-image: url(img-min/thumb/ripple-projects-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 Ripple Projects
-//-             h5 Hanna Tran
-//-         
-//-         a.thumb-unit(data-folder="work-5" href="#" style="background-image: url(img-min/thumb/city-exploration-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 City Exploration
-//-             h5 Vilém Ries
-//-         
-//-         a.thumb-unit(data-folder="work-6" href="#" style="background-image: url(img-min/thumb/aircon-controller-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 Aircon Controller Mobile App
-//-             h5 Grace Saraswati
-//-              
-//-         a.thumb-unit(data-folder="work-7" href="#" style="background-image: url(img-min/thumb/mobile-banking-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 Mobile Banking        
-//-             h5 Bady
-//-         
-//-         a.thumb-unit(data-folder="work-8" href="#" style="background-image: url(img-min/thumb/app-for-events-thumb.jpg);")
-//-           //- img.thumb-unit(s)
-//-           .thumb-overlay
-//-             h4 Event App
-//-             h5 Jakub Antalik
-//-                         
-//-     .work-wrap
-//-       .work-container
-//-         .return
-//-           include ../icons/back-icon.jade
-//-           h4.project-title
-//-           h5.author
-//-         //- .project-load
+              

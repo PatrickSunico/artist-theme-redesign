@@ -6,7 +6,7 @@ $(function() {
 });
 
 function smoothScroll (duration) {
-  $('a.thumb-unit').on('click', function(event) {
+  $('a img.img-portfolio').on('click', function(event) {
     var target = $($(this).attr('href'));
 
     if(target.length) {
@@ -20,7 +20,7 @@ function smoothScroll (duration) {
 }
 
 function workBelt() {
-  $('.thumb-unit').click(function(e) {
+  $('.img-portfolio').click(function(e) {
       $('.work-belt').css('left', '-100%');
       $('.work-container').show();
       e.preventDefault();

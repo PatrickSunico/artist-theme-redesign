@@ -19,11 +19,8 @@ var gulp = require('gulp'),
       jadeLoaders: './raw/views/loaders/**.jade',
       index: './public/index.html',
       scss: './raw/scss/**/*.scss*',
-<<<<<<< HEAD
-=======
       img: './raw/img/*',
       loaders: './raw/views/loaders/*.jade',
->>>>>>> test-branch
       js: './raw/js/*.js*'
     };
 
@@ -33,11 +30,8 @@ var gulp = require('gulp'),
       jadeLoadersOut: 'public/loaders/',
       scssOut: './public/css',
       public: './public/',
-<<<<<<< HEAD
-=======
       img : './public/img-min/',
       loadersOut: './public/loaders',
->>>>>>> test-branch
       jsOut: './public/js/'
     };
 
@@ -58,19 +52,16 @@ var autoprefixerOptions = {
   });
 
   gulp.task('loaders', function(){
-<<<<<<< HEAD
     return gulp.src(rawPaths.jadeLoaders)
           .pipe(jade({
             pretty: true
           }))
           .pipe(gulp.dest(output.jadeLoadersOut));
-=======
     return gulp.src(rawPaths.loaders)
            .pipe(jade({
              pretty: true
            }))
            .pipe(gulp.dest(output.loadersOut));
->>>>>>> test-branch
   });
   gulp.task('sass',function(){
     return gulp.src(rawPaths.scss)
@@ -86,15 +77,12 @@ var autoprefixerOptions = {
           .pipe(gulp.dest(output.jsOut));
   });
 
-<<<<<<< HEAD
-=======
   gulp.task('image-min',function(){
     return gulp.src(rawPaths.img)
           .pipe(imagemin())
           .pipe(gulp.dest(output.img));
   });
 
->>>>>>> test-branch
   // browser-sync reload
   gulp.task('browser-sync', function() {
       browserSync.init({
@@ -116,11 +104,8 @@ gulp.task('watch', function(){
   gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
   gulp.watch(rawPaths.js,['uglify']).on('change', browserSync.reload);
   gulp.watch(rawPaths.jade, ['jade']);
-<<<<<<< HEAD
   gulp.watch(rawPaths.jadeLoaders,['loaders']);
-=======
   gulp.watch(rawPaths.loaders, ['loaders']);
->>>>>>> test-branch
 });
 
 // gulp.task('default',['sass','watch']);
@@ -128,10 +113,6 @@ gulp.task('watch', function(){
 
 
 // Defaults
-<<<<<<< HEAD
 gulp.task('default', ['browser-sync', 'loaders' ,'uglify','jade','sass', 'watch']);
-=======
 gulp.task('default', ['browser-sync','loaders','uglify','jade','sass', 'watch']);
->>>>>>> test-branch
-
 gulp.task('compile', ['sass', 'loaders' ,'uglify','watch']);

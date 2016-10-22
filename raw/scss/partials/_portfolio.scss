@@ -1,6 +1,21 @@
 .alt-section {
   background: #f3f2f2;
 }
+.section-work {
+  overflow-x: hidden;
+}
+
+.work-belt {
+  width: 200%;
+  position: relative;
+  left: -0%;
+  @include transition(all 800ms);
+}
+
+.work-wrap, .thumb-wrap {
+  width: 50%;
+  float: left;
+}
 
 .thumb-container {
   max-width: 100%;
@@ -32,6 +47,7 @@
         opacity: 0.9;
       }
     }
+
     .img-portfolio {
       display:inline-block;
       width: 100%;
@@ -51,6 +67,7 @@
       transition: all 0.6s;
       overflow: hidden;
     }
+
     .text-overlay {
       display: block;
       padding: 0 30px;
@@ -58,18 +75,72 @@
       @include position(absolute, 45% 0 0 0);
       width: 100%;
       text-align: center;
-      text-transform: capitalize;
-      font-size: 18px;
-      font-weight: bold;
-      font-weight: normal!important;
-      color: white;
       opacity: 0;
       filter: alpha(opacity=0);
       transform: translateY(-20px);
       transition: all .3s;
+      h4 {
+        text-transform: capitalize;
+        font-size: 22px;
+        font-weight: bold;
+        font-weight: normal!important;
+        color: white;
+      }
+      h5 {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-weight: normal!important;
+        color: white;
+        font-size: 18px;
+
+      }
     }
   }
 }
+
+.work-container {
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  display: none;
+  img {
+    max-width: 100%;
+  }
+  .return {
+    margin: 10px;
+
+    svg.back-icon {
+      cursor: pointer;
+      opacity: 0.5;
+      // @include size(30px);
+      path  {
+        fill: rgba(0,0,0,0.5);
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    h4.project-name {
+      font-size: 22px;
+      font-weight: bold;
+      font-weight: normal!important;
+      color: black;
+      margin: 10px 0;
+    }
+    h5.author {
+      // font-size: 18px;
+      // margin: 10px 0;
+    }
+  }
+  .project-load {
+    margin: 0 10px;
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+
 
 // Breakpoints for Grid
 // Full-width

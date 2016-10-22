@@ -20,7 +20,7 @@ function smoothScroll (duration) {
 }
 
 function workBelt() {
-  $('.thumb-unit').click(function(e) {
+  $('a.thumb-unit').click(function(e) {
       $('.work-belt').css('left', '-100%');
       $('.work-container').show();
       e.preventDefault();
@@ -30,7 +30,6 @@ function workBelt() {
     $('.work-belt').css('left', '0%');
     $('.work-container').hide(800);
     e.preventDefault();
-
   });
 }
 
@@ -41,16 +40,16 @@ function workLoad() {
   $('.thumb-unit').click(function() {
 
     var self = $(this),
-    newTitle = self.find('.overlay-text h4').text(),
-    author = self.find('.overlay-text h5').text(),
+    newTitle = self.find('div.text-overlay h4').text(),
+    author = self.find('div.text-overlay h5').text(),
     spinner = '<div class="loader">Loading...</div>',
 
     newFolder = self.data('folder'), // refers to data-folder="work-1" inside of the portfolio section
-    newHTML = 'loaders/'+ newFolder +'.html'; // loads a specific project on click
+    newHTML = '../loaders/'+ newFolder +'.html'; // loads a specific project on click
     $('.project-load').html(spinner).load(newHTML);
 
     // New Title and Author Credenditals
-    $('.project-title').text(newTitle);
+    $('.project-name').text(newTitle);
     $('.author').text(author);
 
   });

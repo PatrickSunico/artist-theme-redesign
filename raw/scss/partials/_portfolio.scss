@@ -9,10 +9,13 @@
   font-size: 0;
   @include clearfix;
 
-  .thumb-unit {
-    display: block;
+  a.thumb-unit {
+    display: inline-block;
     width: 25%;
-    float: left;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     position: relative;
     overflow: hidden;
 
@@ -24,13 +27,10 @@
       .thumb-overlay {
          opacity: 0.8;
        }
-      // .overlay-bg {
-      //   opacity: 0.8;
-      // }
-      // .overlay-text {
-      //   transform: translateY(0px);
-      //   opacity: 0.9;
-      // }
+      .text-overlay {
+        transform: translateY(0px);
+        opacity: 0.9;
+      }
     }
     .img-portfolio {
       display:inline-block;
@@ -51,29 +51,44 @@
       transition: all 0.6s;
       overflow: hidden;
     }
+    .text-overlay {
+      display: block;
+      padding: 0 30px;
+      box-sizing: border-box;
+      @include position(absolute, 45% 0 0 0);
+      width: 100%;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 18px;
+      font-weight: bold;
+      font-weight: normal!important;
+      color: white;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      transform: translateY(-20px);
+      transition: all .3s;
+    }
   }
 }
 
-
-
 // Breakpoints for Grid
 // Full-width
-// @include breakpoint-1200-lg {
-//   .thumb-container .thumb-unit {
-//     width: 25%;
-//   }
-// }
-//
-// // 2-col-thumb-unit
-// @include breakpoint-991-lg {
-//   .thumb-container .thumb-unit {
-//     width: 50%;
-//   }
-// }
-//
-// // 1-col-thumb-unit
-// @include breakpoint-580-lg {
-//   .thumb-container .thumb-unit {
-//     width: 100%;
-//   }
-// }
+@include breakpoint-1200-lg {
+  .thumb-container a.thumb-unit {
+    width: 25%;
+  }
+}
+
+// 2-col-thumb-unit
+@include breakpoint-991-lg {
+  .thumb-container a.thumb-unit {
+    width: 50%;
+  }
+}
+
+// 1-col-thumb-unit
+@include breakpoint-580-lg {
+  .thumb-container a.thumb-unit {
+    width: 100%;
+  }
+}

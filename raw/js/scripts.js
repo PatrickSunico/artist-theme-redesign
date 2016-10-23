@@ -3,6 +3,7 @@ $(function() {
   workBelt();
   workLoad();
   client();
+  clientAnimation();
 
 });
 
@@ -58,4 +59,17 @@ function workLoad() {
 
 function client() {
   $('.client-unit').first().addClass('active-client');
+  $('.client-logo').first().addClass('active-client');
 }
+
+// $(window).load(function(){
+//     setTimeout(function() {
+//       $('.text-container').fadeIn('2000');
+//     }, 100);
+//   });
+
+// function clientAnimation() {
+//   setInterval(function() {
+//     $('.clients-belt .client-unit').fadeIn('2000');
+//   }, 100);
+// }

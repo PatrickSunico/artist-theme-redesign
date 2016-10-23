@@ -2,7 +2,7 @@
   position: relative;
 }
 .client-controls{
-  @include position(absolute, null 0px null 0px);
+  @include position(absolute, 40% 0px null 0px);
   // z-index: 2;
   // @include size(100%);
   > div {
@@ -16,7 +16,6 @@
     top: 50%;
     right: 10px;
     cursor: pointer;
-
   }
   .client-control-prev {
     position: absolute;
@@ -31,7 +30,18 @@
   position: relative;
   .client-unit {
     max-width: 700px;
-    margin: 0 0 0 -350px;
+    margin: 0 0 0 -360px;
+    @include position (absolute, 0px null null 50%);
+    z-index: 1;
+    display: none;
+    &.active-client {
+      @include display(flex);
+      animation: fadein 2s;
+      -moz-animation: fadein 2s; /* Firefox */
+      -webkit-animation: fadein 2s; /* Safari and Chrome */
+      -o-animation: fadein 2s; /* Opera */
+    }
+    // margin: 0 0 0 -350px;
     // @include position(absolute, 0px null null 50%);
     // z-index: 1;
     // display: none;
@@ -67,7 +77,8 @@
 .client-list {
   position: relative;
   width: 700px;
-  margin: 0px auto 100px;
+  // margin: 0px auto 100px;
+  margin: 200px auto 100px;
   @include display(flex);
   @include align-items(center);
   @include justify-content(center);

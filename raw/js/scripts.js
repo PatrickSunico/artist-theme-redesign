@@ -2,6 +2,7 @@ $(function() {
   smoothScroll(300);
   workBelt();
   workLoad();
+  client();
 
 });
 
@@ -53,4 +54,8 @@ function workLoad() {
     $('.author').text(author);
 
   });
+}
+
+function client() {
+  $('.client-unit').first().addClass('active-client');
 }

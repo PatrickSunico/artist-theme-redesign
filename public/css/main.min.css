@@ -322,8 +322,13 @@ section .paragraph-content {
   max-width: 620px;
   padding: 0 15px;
   margin: 0 auto;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
+  color: #777777;
+}
+
+section .paragraph-content strong {
+  color: #000;
 }
 
 .skill-set-container .skill-icons.active-rating-1 span:nth-child(n+1), .skill-set-container .skill-icons.active-rating-2 span:nth-child(n+2), .skill-set-container .skill-icons.active-rating-3 span:nth-child(n+3), .skill-set-container .skill-icons.active-rating-4 span:nth-child(n+4), .skill-set-container .skill-icons.active-rating-5 span:nth-child(n+5), .skill-set-container .skill-icons.active-rating-6 span:nth-child(n+6), .skill-set-container .skill-icons.active-rating-7 span:nth-child(n+7), .skill-set-container .skill-icons.active-rating-8 span:nth-child(n+8), .skill-set-container .skill-icons.active-rating-9 span:nth-child(n+9), .skill-set-container .skill-icons.active-rating-10 span:nth-child(n+10) {
@@ -591,4 +596,119 @@ section .paragraph-content {
   .thumb-container a.thumb-unit {
     width: 100%;
   }
+}
+
+.section-clients {
+  position: relative;
+}
+
+.client-controls {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+}
+
+.client-controls > div {
+  height: 40px;
+  width: 40px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.client-controls .client-control-next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+}
+
+.client-controls .client-control-prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  cursor: pointer;
+}
+
+.clients-belt {
+  width: 100%;
+  position: relative;
+}
+
+.clients-belt .client-unit {
+  max-width: 700px;
+  margin: 0 0 0 -350px;
+}
+
+.clients-belt .client-unit .client-testimonial {
+  position: relative;
+  font-size: 18px;
+  line-height: 2;
+  color: #777777;
+}
+
+.clients-belt .client-unit .client-testimonial p {
+  margin: 20px 0;
+}
+
+.clients-belt .client-unit .client-testimonial p strong {
+  color: #000;
+}
+
+.clients-belt .client-unit .client-testimonial .client-quotation-mark-up {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.clients-belt .client-unit .client-testimonial .client-quotation-mark-down {
+  position: absolute;
+  top: -15px;
+  left: 650px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.client-list {
+  position: relative;
+  width: 700px;
+  margin: 0px auto 100px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  box-align: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+.client-list .client-logo {
+  margin: 0 auto;
+  cursor: pointer;
+  padding-bottom: 15px;
+}
+
+.client-list .client-logo.active-client {
+  box-shadow: 0px 4px 0px #d0d0d0;
+  opacity: 1;
+}
+
+.client-list .client-logo img {
+  height: auto;
+  width: 100px;
+  margin: 0 auto;
 }

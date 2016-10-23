@@ -3,8 +3,6 @@ $(function() {
   workBelt();
   workLoad();
   client();
-  clientAnimation();
-
 });
 
 function smoothScroll (duration) {
@@ -49,27 +47,50 @@ function workLoad() {
     newFolder = self.data('folder'), // refers to data-folder="work-1" inside of the portfolio section
     newHTML = '../loaders/'+ newFolder +'.html'; // loads a specific project on click
     $('.project-load').html(spinner).load(newHTML);
-
-    // New Title and Author Credenditals
     $('.project-name').text(newTitle);
     $('.author').text(author);
 
   });
 }
-
+// Image Indicators
 function client() {
   $('.client-unit').first().addClass('active-client');
   $('.client-logo').first().addClass('active-client');
+
+  $('.client-logo').click(function(){
+    var self = $(this), //client-logo
+    siblings = self.parent().children(), // siblings of client-logo
+    position = siblings.index(self);
+    $('.client-unit').removeClass('active-client').eq(position).addClass('active-client');
+    siblings.removeClass('active-client');
+    self.addClass('active-client');
+
+  });
+
+  $('.client-control-next, .client-control-prev').click(function(){
+    var self = $(this),
+    activeClient = $('.clients-belt').find('.active-client'),
+    position = $('.clients-belt').children().index(activeClient);
+    clientNum = $('.client-unit').length;
+
+    if(self.hasClass('client-control-next')){
+
+      if (position < 3) {
+        $('.active-client').removeClass('active-client').next().addClass('active-client');
+        console.log("Next");
+      } else {
+        $('.client-unit').removeClass('active-client').first().addClass('active-client');
+        $('.client-logo').removeClass('active-client').first().addClass('active-client');
+      }
+
+    } else {
+      if (position === 0){
+        $('.client-unit').removeClass('active-client').last().addClass('active-client');
+        $('.client-unit').removeClass('active-client').last().addClass('active-client');
+      } else {
+        $('.active-client').removeClass('active-client').prev().addClass('active-client');
+      }
+    }
+    
+  });
 }
-
-// $(window).load(function(){
-//     setTimeout(function() {
-//       $('.text-container').fadeIn('2000');
-//     }, 100);
-//   });
-
-// function clientAnimation() {
-//   setInterval(function() {
-//     $('.clients-belt .client-unit').fadeIn('2000');
-//   }, 100);
-// }

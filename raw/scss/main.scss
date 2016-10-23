@@ -1,11 +1,11 @@
+// Globals
+@import 'partials/global';
+@import 'mixins/mixins';
+@import 'mixins/animations';
+
 // vendor
 @import 'bourbon/bourbon';
 @import 'vendor/spinner';
-
-// Globals
-@import 'mixins/mixins';
-@import 'mixins/animations';
-@import 'partials/global';
 
 // Partials
 @import 'partials/header';

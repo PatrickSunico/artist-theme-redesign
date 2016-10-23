@@ -1,3 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .loader:before,
 .loader:after,
 .loader {
@@ -59,30 +102,6 @@
   40% {
     box-shadow: 0 2.5em 0 0;
   }
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.clear {
-  clear: both;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  padding: 0;
-  margin: 0;
 }
 
 header {
@@ -637,7 +656,7 @@ section .paragraph-content strong {
 
 .clients-belt .client-unit {
   max-width: 700px;
-  margin: 0 0 0 -360px;
+  margin: 0 0 0 -340px;
   position: absolute;
   top: 0px;
   left: 50%;
@@ -652,12 +671,12 @@ section .paragraph-content strong {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
   /* Firefox */
-  -webkit-animation: fadein 2s;
+  -webkit-animation: fadein 3s;
   /* Safari and Chrome */
-  -o-animation: fadein 2s;
+  -o-animation: fadein 3s;
   /* Opera */
 }
 
@@ -666,6 +685,15 @@ section .paragraph-content strong {
   font-size: 18px;
   line-height: 2;
   color: #777777;
+}
+
+.clients-belt .client-unit .client-testimonial:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 .clients-belt .client-unit .client-testimonial p {
@@ -678,18 +706,20 @@ section .paragraph-content strong {
 
 .clients-belt .client-unit .client-testimonial .client-quotation-mark-up {
   position: absolute;
-  top: -15px;
+  top: -10px;
   left: -10px;
   z-index: -1;
   opacity: 0.5;
+  display: block;
 }
 
 .clients-belt .client-unit .client-testimonial .client-quotation-mark-down {
   position: absolute;
-  top: -15px;
+  top: -10px;
   left: 650px;
   z-index: -1;
   opacity: 0.5;
+  display: block;
 }
 
 .client-list {

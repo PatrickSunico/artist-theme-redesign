@@ -2,9 +2,8 @@
   position: relative;
 }
 .client-controls{
-  @include position(absolute, 40% 0px null 0px);
-  // z-index: 2;
-  // @include size(100%);
+  @include position(absolute, 0px 0px 0px 0px);
+  z-index: 2;
   > div {
     height: 40px;
     width: 40px;
@@ -30,8 +29,8 @@
   position: relative;
   .client-unit {
     max-width: 700px;
-    margin: 0 0 0 -340px;
-    @include position (absolute, 0px null null 50%);
+    margin: 50px auto;
+    position: relative;
     z-index: 1;
     display: none;
     &.active-client {
@@ -56,35 +55,37 @@
         height: 0;
       }
       p {
-        margin: 20px 0;
+        text-align: center;
+        margin: 20px;
         strong {
           color: #000;
         }
       }
-      .client-quotation-mark-up { // quotation mark icon
-        @include position(absolute, -10px null null -10px)
+      .client-quotation-mark-up {
+        @include position(absolute, 1% null null 6.5%)
         z-index: -1;
         opacity: 0.5;
         display:block;
       }
-      .client-quotation-mark-down {
-        @include position(absolute, -10px null null 650px)
-        z-index: -1;
-        opacity: 0.5;
-        display:block;
-      }
+      // .client-quotation-mark-down { // quotation mark icon
+      //   @include position(absolute, 1% null null 80%)
+      //   z-index: -1;
+      //   opacity: 0.5;
+      //   display:block;
+      // }
     }
   }
 }
 
 .client-list {
   position: relative;
-  width: 700px;
-  // margin: 0px auto 100px;
-  margin: 200px auto 100px;
+  z-index: 3;
+  max-width: 750px;
+  margin: 0px auto 100px;
   @include display(flex);
   @include align-items(flex-end);
   @include justify-content(space-around);
+
   .client-logo {
     margin: 0 auto;
     cursor: pointer;
@@ -104,3 +105,50 @@
     }
   }
 }
+
+
+@include breakpoint-991-lg {
+  .client-controls{
+    display: none;
+  }
+  .client-belt {
+    // .client-unit.active-client {
+    //   display: block;
+    //   position: relative;
+    //   margin-left: 0px;
+    //   left: auto;
+    // }
+    .client-unit.active-client {
+
+      .client-testimonial {
+        // padding: 0 30px;
+        // max-width: 400px;
+        // margin: 0px auto;
+      }
+    }
+  }
+  .client-list {
+    .client-logo {
+      img {
+        max-width: 15vw;
+      }
+    }
+  }
+}
+
+
+// @include breakpoint-768-lg {
+//   // .client-quotation-mark-up { // quotation mark icon
+//   //   @include position(absolute, -10px null null 10px)
+//   //   z-index: -1;
+//   //   opacity: 0.5;
+//   //   display:block;
+//   // }
+//
+//   .client-quotation-mark-down { // quotation mark icon
+//     @include position(absolute, -10px null null 10%)
+//     z-index: -1;
+//     opacity: 0.5;
+//     display:block;
+//   }
+// }

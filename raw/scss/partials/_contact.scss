@@ -77,19 +77,17 @@
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
-  span {
-    .email-link {
-      letter-spacing: .1em;
+  .email-link {
+    letter-spacing: .1em;
 
-      text-decoration: none;
-      color: black;
-      font-size: 72px;
+    text-decoration: none;
+    color: black;
+    font-size: 72px;
+    @include transition(.3s ease-in);
+    &:hover {
+      color: #a1a1a1;
+      // opacity: 0.5;
       @include transition(.3s ease-in);
-      &:hover {
-        color: #a1a1a1;
-        // opacity: 0.5;
-        @include transition(.3s ease-in);
-      }
     }
   }
 

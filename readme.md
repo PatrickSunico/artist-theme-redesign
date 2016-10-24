@@ -1,4 +1,4 @@
-# Artist Theme  
+# Designer Theme  
 
 Just Practicing my front-end so I decided to make a site based of a Web designer and developer theme.
 
@@ -7,7 +7,7 @@ Just Practicing my front-end so I decided to make a site based of a Web designer
 I do not own the assets used here by the list of this group of creative people, Go ahead check them out and leave a like. Thank you
 
 
-#### Artist Theme Credits
+#### Designer Theme Credits
 
 * Vitaliy Vill - Green Forest Night https://dribbble.com/shots/2818276-Green-forest-night-background
 

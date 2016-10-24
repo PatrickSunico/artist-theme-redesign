@@ -1,13 +1,30 @@
 section.alt-section.section-contact 
   h3#contact Contact 
+  
+  form(action="//formspree.io/chikoystarr@gmail.com", method="POST")
+    fieldset.info-group
+      label 
+        span Your Name 
+        input(type="text", name="name")
+      label 
+        span Your Email 
+        input(type="email", name="_replyto" ) 
+    label 
+      span Tell me your requirements
+    textarea(name="message")
+    .submit-wrap
+      input(type="submit", value="Send")
 
 section.email 
+  //- span(data-shadow-text="text-shadow")
   a.email-link(href="mailto:designer@gmail.com") designer@gmail.com 
+  
+  
+  //- <span data-shadow-text="Text-Shadow">Text-Shadow</span>
+  hr.bar 
+  
   .social-links 
     a(href="#" class="icon-github")
     a(href="#" class="icon-dribbble")
     a(href="#" class="icon-twitter")
     a(href="#" class="icon-linkedin")
-
-
-    //- a.biglink(href='mailto:devtipsfordesigners@gmail.com', style='font-size: 114.333px;') devtipsfordesigners@gmail.com

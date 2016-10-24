@@ -28,6 +28,9 @@ h1,h2,h3,h4,h5,h6,p{
 section {
   padding-top: 120px;
   padding-bottom: 120px;
+  &.alt-section  {
+    background: #f9f9f9;
+  }
 }
 @include breakpoint-991-lg {
   section {

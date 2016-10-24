@@ -146,6 +146,10 @@ section {
   padding-bottom: 120px;
 }
 
+section.alt-section {
+  background: #f9f9f9;
+}
+
 @media only screen and (max-width: 991px) {
   section {
     padding-top: 80px;
@@ -663,6 +667,8 @@ section .paragraph-content strong {
 
 .section-clients {
   position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .client-controls {
@@ -715,13 +721,8 @@ section .paragraph-content strong {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s;
-  /* Firefox */
   -webkit-animation: fadein 3s;
-  /* Safari and Chrome */
-  -o-animation: fadein 3s;
-  /* Opera */
+  animation: fadein 3s;
 }
 
 .clients-belt .client-unit .client-testimonial {
@@ -729,15 +730,6 @@ section .paragraph-content strong {
   font-size: 18px;
   line-height: 2;
   color: #777777;
-}
-
-.clients-belt .client-unit .client-testimonial:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
 }
 
 .clients-belt .client-unit .client-testimonial p {
@@ -762,7 +754,7 @@ section .paragraph-content strong {
   position: relative;
   z-index: 3;
   max-width: 750px;
-  margin: 0px auto 100px;
+  margin: 0px auto;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -822,24 +814,119 @@ section .paragraph-content strong {
   }
 }
 
+.section-contact form {
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.section-contact form input, .section-contact form textarea {
+  border: 1.5px solid #b0b0b0;
+  width: 100%;
+  padding: 10px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.section-contact form input:focus, .section-contact form textarea:focus {
+  outline: none;
+  border-color: #2c2c2d;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.section-contact form textarea {
+  height: 18em;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.section-contact form .submit-wrap {
+  text-align: right;
+}
+
+.section-contact form .submit-wrap input[type="submit"] {
+  background: black;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  width: 30%;
+}
+
+.section-contact form .submit-wrap input[type="submit"]:hover {
+  background: white;
+  border-color: black;
+  color: black;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.section-contact form .info-group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.section-contact form .info-group label {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.section-contact form .info-group label span {
+  margin-bottom: 10px;
+}
+
+.section-contact form .info-group label:nth-child(1) {
+  padding-right: 5px;
+}
+
+.section-contact form .info-group label:nth-child(2) {
+  padding-left: 5px;
+}
+
+.section-contact form label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.section-contact form label span {
+  display: block;
+}
+
 .email {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
 }
 
-.email .email-link {
+.email span .email-link {
+  letter-spacing: .1em;
   text-decoration: none;
   color: black;
   font-size: 72px;
-  -webkit-transition: 0.3s ease-in-;
-  transition: 0.3s ease-in-;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
 }
 
-.email .email-link:hover {
+.email span .email-link:hover {
   color: #a1a1a1;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
+}
+
+.email .bar {
+  width: 250px;
+  height: 0px;
+  border-top: 4px solid black;
+  margin: 30px auto;
 }
 
 .social-links {

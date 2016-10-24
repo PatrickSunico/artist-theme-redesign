@@ -91,6 +91,6 @@ function client() {
         $('.active-client').removeClass('active-client').prev().addClass('active-client');
       }
     }
-    
+
   });
 }

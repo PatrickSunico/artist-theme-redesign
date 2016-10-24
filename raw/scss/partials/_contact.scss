@@ -1,0 +1,52 @@
+.email {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  .email-link {
+    text-decoration: none;
+    color: black;
+    font-size: 72px;
+    @include transition(.3s ease-in-);
+    &:hover {
+      color: #a1a1a1;
+      // opacity: 0.5;
+      @include transition(.3s ease-in);
+
+    }
+  }
+}
+
+.social-links {
+  max-width: 700px;
+  // margin: 50px auto;
+  margin: 0 auto;
+  @include display(flex);
+  @include justify-content(space-around);
+  a {
+    display: block;
+    background: #3B413C;
+    @include size(50px);
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+    @include transition(.3s ease-out);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+      @include transform (translate(0px,-10px));
+      margin-bottom: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+@include breakpoint-991-lg {
+  .email {
+    .email-link {
+      font-size: 8vw;
+    }
+  }
+}

@@ -732,31 +732,39 @@ section .paragraph-content strong {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  box-align: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  box-pack: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
+  -webkit-box-align: end;
+  box-align: end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-align: end;
+  -webkit-box-pack: distribute;
+  box-pack: distribute;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
 }
 
 .client-list .client-logo {
   margin: 0 auto;
   cursor: pointer;
   padding-bottom: 15px;
+  border-bottom: solid 4px transparent;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
 }
 
 .client-list .client-logo.active-client {
-  box-shadow: 0px 4px 0px #d0d0d0;
-  opacity: 1;
+  border-bottom: solid 4px #d0d0d0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .client-list .client-logo img {

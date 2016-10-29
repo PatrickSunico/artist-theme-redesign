@@ -19,6 +19,12 @@
     @content;
   }
 }
+
+@mixin breakpoint-680-lg {
+  @media only screen and (max-width: 680px) {
+    @content;
+  }
+}
 @mixin breakpoint-580-lg {
   @media only screen and (max-width:580px) {
     @content;

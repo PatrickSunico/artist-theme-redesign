@@ -48,6 +48,7 @@
         width: 50%;
         float: left;
         @include box-sizing(border-box);
+        box-sizing: border-box;
         font-size: 18px;
         font-weight: 300;
         span {
@@ -86,7 +87,7 @@
     @include transition(.3s ease-in);
     &:hover {
       color: #a1a1a1;
-      // opacity: 0.5;
+      opacity: 0.5;
       @include transition(.3s ease-in);
     }
   }
@@ -104,6 +105,9 @@
   margin: 0 auto;
   @include display(flex);
   @include justify-content(space-around);
+  display: flex;
+  justify-content: space-around;
+
   a {
     display: block;
     background: #3B413C;

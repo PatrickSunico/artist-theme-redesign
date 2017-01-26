@@ -895,6 +895,7 @@ section .paragraph-content strong {
   width: 50%;
   float: left;
   box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 18px;
   font-weight: 300;
 }
@@ -937,6 +938,7 @@ section .paragraph-content strong {
 
 .email .email-link:hover {
   color: #a1a1a1;
+  opacity: 0.5;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
@@ -964,6 +966,8 @@ section .paragraph-content strong {
   -o-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: distribute;
+  display: flex;
+  justify-content: space-around;
 }
 
 .social-links a {

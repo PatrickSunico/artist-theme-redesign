@@ -73,7 +73,7 @@ var autoprefixerOptions = {
 
   gulp.task('uglify', function() {
     return gulp.src(rawPaths.js)
-          .pipe(uglify())
+          // .pipe(uglify())
           .pipe(gulp.dest(output.jsOut));
   });
 
